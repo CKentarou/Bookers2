@@ -8,6 +8,8 @@ class User < ApplicationRecord
 
   has_many :books, dependent: :destroy
 
+  validates :name, presence: true
+
   def get_image(size: nil)
     unless image.attached?
       file_path = Rails.root.join('app/assets/images/no_image.jpg')
