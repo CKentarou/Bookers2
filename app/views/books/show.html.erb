@@ -20,7 +20,7 @@
             <tr>
               <td class="td_image text-center">
                 <%= link_to user_path(@book.user.id), class: 'text-decoration-none text-primary' do %>
-                  <%= image_tag @book.user.get_image %>
+                  <%= image_tag @book.user.get_image(size: '100x100') %>
                   <br>
                   <%= @book.user.name %>
                 <% end %>
