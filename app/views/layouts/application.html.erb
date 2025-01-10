@@ -13,7 +13,7 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
           <%= link_to "Bookers", root_path, class: "navbar-brand" %>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,31 +23,31 @@
             <% if user_signed_in? %>
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <%= link_to "Home", root_path, class: "nav-link text-dark" %>
+                  <%= link_to "Home", root_path, class: "nav-link text-light" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "Users", users_path, class: "nav-link text-dark" %>
+                  <%= link_to "Users", users_path, class: "nav-link text-light" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "Books", books_path, class: "nav-link text-dark" %>
+                  <%= link_to "Books", books_path, class: "nav-link text-light" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link text-dark" %>
+                  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link text-light" %>
                 </li>
               </ul>
             <% else %>
-              <ul class="navbar-nav ml-auto">
+              <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <%= link_to "Home", root_path, class: "nav-link text-dark" %>
+                  <%= link_to "Home", root_path, class: "nav-link text-light" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "About", homes_about_path ,class: "nav-link text-dark" %>
+                  <%= link_to "About", homes_about_path ,class: "nav-link text-light" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "Sign up", new_user_registration_path, class: "nav-link text-dark" %>
+                  <%= link_to "Sign up", new_user_registration_path, class: "nav-link text-light" %>
                 </li>
                 <li class="nav-item">
-                  <%= link_to "Log in", new_user_session_path, class: "nav-link text-dark" %>
+                  <%= link_to "Log in", new_user_session_path, class: "nav-link text-light" %>
                 </li>
               </ul>
             <% end %>
@@ -57,5 +57,14 @@
 
     </header>
     <%= yield %>
+    <footer>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="mx-auto">
+            <p>CopyRight Infratop.inc</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
