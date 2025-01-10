@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ .td_image {
+  width: 100px;
+  height: 100px;
+ }
+
+ .table td {
+  padding: 0.75rem;
+ }
