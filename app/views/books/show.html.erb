@@ -4,7 +4,7 @@
 
       <%= render 'user_info', user: @user %>
       <%= render 'new_book', new_book: @new_book %>
-      
+
     </div>
     <div class="col-md-8 offset-md-1">
       <h2>Books</h2>
@@ -27,7 +27,7 @@
               </td>
 
               <td>
-                <%= link_to 'book.body'.html_safe, book_path(@book.id), class: 'text-decoration-none text-primary' %>
+                <%= link_to @book.title, book_path(@book.id), class: 'text-decoration-none text-primary' %>
               </td>
               <td><%= @book.body %></td>
               <% if current_user == @user %>

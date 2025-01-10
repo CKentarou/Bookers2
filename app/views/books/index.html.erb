@@ -21,7 +21,7 @@
             <tr>
               <td class="td_image"><%= image_tag book.user.get_image %></td>
               <td>
-                <%= link_to 'book.body'.html_safe, book_path(book.id), class: 'text-decoration-none text-primary' %>
+                <%= link_to book.title, book_path(book.id), class: 'text-decoration-none text-primary' %>
               </td>
               <td><%= book.body %></td>
             </tr>
