@@ -31,6 +31,9 @@
               </td>
               <td><%= book.body %></td>
               <%= render 'books/favorite', book: book %>
+              <td>
+                <p>コメント件数：<%= book.book_comments.count %></p>
+              </td>
             </tr>
           <% end %>
         </tbody>
