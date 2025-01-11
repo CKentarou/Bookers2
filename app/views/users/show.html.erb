@@ -30,6 +30,7 @@
                 <%= link_to book.title, book_path(book.id), class: 'text-decoration-none text-primary' %>
               </td>
               <td><%= book.body %></td>
+              <%= render 'books/favorite', book: book %>
             </tr>
           <% end %>
         </tbody>
